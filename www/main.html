@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery.js"></script>
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+  <script>
+
+  </script>
+  </head>
+  <body>
+  <div id="content">
+    <div id="cabezal">
+      <a href="http://banderablanca.org.ar" class="banderalogo"><img src="assets/imagenes/mdpi/logobandera.png" class="dpi-var"/></a>
+      <a href="http://missingchildren.org.ar" class="missinglogo"><img src="assets/imagenes/mdpi/logomissing.png" class="dpi-var"/></a>
+    </div>
+    <div id="loader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+    <div id="busqueda">
+      <img src="" id="foto" width="200"/>
+      <h2 id="titular"></h2>
+      <p id="desc"></p>
+    </div>
+    <div id="footer">
+      <a href="tel:0800-333-5500" class="phone"><i class="fa fa-phone fa-lg"></i> 0800 - 333 - 5500</a>
+      <a href="" class="share"><i class="fa fa-share-alt fa-lg"></i> Compartir</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="js/index.js"></script>
+        <script type="text/javascript">
+            var pushNotification;
+            var channelUri;
+            
+            function onDeviceReady() {
+          		// Enable to debug issues.
+				  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+				  
+				  var notificationOpenedCallback = function(jsonData) {
+				    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+				  };
+				
+				  window.plugins.OneSignal.init("c36949b6-0e96-4841-9ed2-9151bc070d5b",
+				                                 {googleProjectNumber: "23253687168"},
+				                                 notificationOpenedCallback);
+				  
+				  // Show an alert box if a notification comes in when the user is in your app.
+				  window.plugins.OneSignal.enableInAppAlertNotification(true);
+                 
+            }
+            
+            
+            
+            function errorHandler (error) {
+              /*alert("ERROR3");*/
+                //$("#app-status-ul").append('<li>error:'+ error +'</li>');
+            }
+            
+      document.addEventListener('deviceready', onDeviceReady, true);
+
+         </script>
+  </body>
+</html>
