@@ -27,7 +27,6 @@
     <preference name="android-build-tool" value="gradle" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.network" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
     <icon src="www/res/icon/android/icon-96-xhdpi.png" />
