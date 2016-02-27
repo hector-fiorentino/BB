@@ -63,10 +63,3 @@ $(document).ready(function(){
 		window.plugins.socialsharing.share(txt, null, null, enlace);
 	})
 })
-function guardarPush(){
-	$.get("http://banderablanca.org.ar/SubscribeDroid",{channel:channelUri},function(exito){
-		if(exito){
-			//alert(exito);
-		}
-	})
-}
