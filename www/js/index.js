@@ -30,7 +30,7 @@ $(document).ready(function(){
 			els[i].src = src;
 		}
 		//alert(els);
-	
+	alert("OK");
 	//Buscar imagenes con dpi variable y reemplaza el folder por el adecuado.
 	$.post("http://banderablanca.org.ar/GetNews",{},function(exito){
 		if(exito){
@@ -53,7 +53,9 @@ $(document).ready(function(){
 			$("#titular").html(exito.newsTitle);
 			$("#busqueda").show();
 		}
-	},"json")
+	},"json").fail(function(er){
+		alert(JSON.stringify(er));
+	})
 
 	$(".share").click(function(){
 		//alert(txt + " " + imagen);
