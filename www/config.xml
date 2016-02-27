@@ -28,6 +28,7 @@
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
     <icon src="www/res/icon/android/icon-96-xhdpi.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
@@ -55,4 +56,6 @@
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-intent href="https://*/*" /> 
 </widget>

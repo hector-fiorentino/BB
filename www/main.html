@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src *  'unsafe-inline'; script-src *  'unsafe-inline'; media-src *">
   <script src="js/jquery.js"></script>
   <link href="css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/estilos.css" />
@@ -17,10 +18,8 @@
       <a href="http://missingchildren.org.ar" class="missinglogo"><img src="assets/imagenes/mdpi/logomissing.png" class="dpi-var"/></a>
     </div>
     <div id="loader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
-    <img src="https://lh5.ggpht.com/XNdlTKqlAu5mH6-DmV4eQlKJ7z-t8KArkN4_wAQxy3SruGF6bAZvTsSI4yRs8qvEiNU=h80-rw" width="200"/>
-      <h3>Actualiza</h3>
     <div id="busqueda">
-      <img src="https://lh5.ggpht.com/XNdlTKqlAu5mH6-DmV4eQlKJ7z-t8KArkN4_wAQxy3SruGF6bAZvTsSI4yRs8qvEiNU=h80-rw" id="foto" width="200"/>
+      <img src="" id="foto" width="200"/>
       <h2 id="titular"></h2>
       <p id="desc"></p>
     </div>
@@ -37,7 +36,7 @@
           		// Enable to debug issues.
 				  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 				  
-				  /*var notificationOpenedCallback = function(jsonData) {
+				  var notificationOpenedCallback = function(jsonData) {
 				    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
 				  };
 				
@@ -46,7 +45,7 @@
 				                                 notificationOpenedCallback);
 				  
 				  // Show an alert box if a notification comes in when the user is in your app.
-				  window.plugins.OneSignal.enableInAppAlertNotification(true);*/
+				  window.plugins.OneSignal.enableInAppAlertNotification(true);
                  
             }
             
